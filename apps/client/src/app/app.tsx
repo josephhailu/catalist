@@ -1,10 +1,13 @@
-import NxWelcome from './nx-welcome';
+import { RouterProvider } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 
-export function App() {
+import { router } from "../routes/router";
+
+function App() {
   return (
-    <div>
-      <NxWelcome title="client" />
-    </div>
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
   );
 }
 
