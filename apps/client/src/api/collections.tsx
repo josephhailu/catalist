@@ -1,15 +1,14 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { baseApi } from './api';
 
 // Define a service using a base URL and expected endpoints
-export const collectionsApi = createApi({
-  reducerPath: 'collectionsApi',
-  baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:6060/api/collections',
-    credentials: 'include',
-  }),
+export const collectionsApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getCollections: builder.query({
-      query: () => `collections`,
+      query: (body) => ({
+        url: `/collections`,
+        method: 'POST',
+        body,
+      }),
     }),
   }),
 });

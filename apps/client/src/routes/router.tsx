@@ -9,6 +9,7 @@ import Auth0ProviderLayout from '../auth/Auth0ProviderLayout ';
 import { AuthenticationGuard } from '../auth/AuthenticationGuard ';
 import Home from '../pages/Home/Home';
 import { ROUTES } from './routes';
+import Dashboard from '../pages/Dashboard/Dashboard';
 
 export const router = createBrowserRouter(
   // https://stackoverflow.com/a/73938067/11449115
@@ -17,7 +18,7 @@ export const router = createBrowserRouter(
       <Route path={ROUTES.INDEX} element={<Home />} />
       <Route
         path={ROUTES.DASHBOARD}
-        element={<AuthenticationGuard component={Home} />}
+        element={<AuthenticationGuard component={Dashboard} />}
       />
 
       <Route path={ROUTES.CALLBACK} element={<Callback />} />

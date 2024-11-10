@@ -53,6 +53,7 @@ app.use(
     origin: CLIENT_ORIGIN_URL,
     methods: ['GET', 'POST'],
     allowedHeaders: ['Authorization', 'Content-Type'],
+    credentials: true,
     maxAge: 86400,
   })
 );

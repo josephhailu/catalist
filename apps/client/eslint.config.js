@@ -1,5 +1,5 @@
 const nx = require('@nx/eslint-plugin');
-const baseConfig = require('../../eslint.config.js').default;
+const baseConfig = require('../../eslint.config.js');
 const testingLibrary = require('eslint-plugin-testing-library');
 
 module.exports = [

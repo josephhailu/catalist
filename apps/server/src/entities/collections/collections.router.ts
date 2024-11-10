@@ -14,7 +14,7 @@ collectionsRouter.get('/public', (req, res) => {
   res.status(200).json(message);
 });
 
-collectionsRouter.get('/protected', validateAccessToken, (req, res) => {
+collectionsRouter.post('/', validateAccessToken, (req, res) => {
   const message = getProtectedMessage();
 
   res.status(200).json(message);
