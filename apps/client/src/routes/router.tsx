@@ -2,13 +2,13 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-} from "react-router-dom";
-import Callback from "../pages/Callback/Callback.tsx";
-import FourOFour from "../pages/404/FourOFour.tsx";
-import Auth0ProviderLayout from "../auth/Auth0ProviderLayout .tsx";
-import { AuthenticationGuard } from "../auth/AuthenticationGuard .tsx";
-import Home from "../pages/Home/Home.tsx";
-import { ROUTES } from "./routes.ts";
+} from 'react-router-dom';
+import Callback from '../pages/Callback/Callback';
+import FourOFour from '../pages/404/FourOFour';
+import Auth0ProviderLayout from '../auth/Auth0ProviderLayout ';
+import { AuthenticationGuard } from '../auth/AuthenticationGuard ';
+import Home from '../pages/Home/Home';
+import { ROUTES } from './routes';
 
 export const router = createBrowserRouter(
   // https://stackoverflow.com/a/73938067/11449115

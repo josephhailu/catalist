@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 import express from 'express';
 import helmet from 'helmet';
 import nocache from 'nocache';
-import { collectionsRouter } from './collections/collections.router';
+import { collectionsRouter } from './entities/collections/collections.router';
 import { errorHandler } from './middleware/error.middleware';
 import { notFoundHandler } from './middleware/not-found.middleware';
 
