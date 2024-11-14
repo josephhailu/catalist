@@ -1,4 +1,3 @@
-import LogoutButton from '../../auth/LogoutButton';
 import { useGetCollectionsQuery } from '../../api/collections';
 
 const Dashboard = () => {
@@ -7,7 +6,6 @@ const Dashboard = () => {
   return (
     <div className="nav-bar__buttons">
       <pre>{JSON.stringify(data)}</pre>
-      <LogoutButton />
     </div>
   );
 };

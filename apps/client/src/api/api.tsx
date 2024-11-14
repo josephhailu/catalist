@@ -8,7 +8,7 @@ export const baseApi = createApi({
     prepareHeaders: (headers, { getState }) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const token = (getState() as any)?.auth?.token;
-      console.log({ token });
+
       if (token) {
         headers.set('Authorization', `Bearer ${token}`);
       }
