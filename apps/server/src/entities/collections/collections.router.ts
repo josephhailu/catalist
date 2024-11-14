@@ -8,20 +8,14 @@ import {
 
 export const collectionsRouter = express.Router();
 
-collectionsRouter.get('/public', (req, res) => {
-  const message = getPublicMessage();
+collectionsRouter.get('/', validateAccessToken, (req, res) => {
+  const message = getProtectedMessage();
 
   res.status(200).json(message);
 });
 
 collectionsRouter.post('/', validateAccessToken, (req, res) => {
   const message = getProtectedMessage();
-
-  res.status(200).json(message);
-});
-
-collectionsRouter.get('/admin', validateAccessToken, (req, res) => {
-  const message = getAdminMessage();
 
   res.status(200).json(message);
 });

@@ -6,6 +6,13 @@ export const collectionsApi = baseApi.injectEndpoints({
     getCollections: builder.query({
       query: (body) => ({
         url: `/collections`,
+        method: 'GET',
+        body,
+      }),
+    }),
+    createCollection: builder.query({
+      query: (body) => ({
+        url: `/collections`,
         method: 'POST',
         body,
       }),
